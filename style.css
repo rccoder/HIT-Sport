@@ -1,0 +1,141 @@
+        .chatWrapper{
+        background: url(ChatBackground.jpg);/*聊天区域背景装饰图片*/
+        width: 100%;
+        height: 100%;
+    }
+    .chatWrapper #chat{
+        margin: 0;padding: .5em 1em;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; 
+        -webkit-user-select:none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .chatWrapper #chat img {max-width: 100%;}
+    .chatWrapper #chat li{
+        position: relative;
+        margin: 1em 0;
+        list-style-type: none;
+    }
+    .chatWrapper #chat li:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .chatWrapper #chat li{*+height:1%;}
+    .chatWrapper #chat li .userFace{
+        width: 38px;
+        height: 38px;
+        float: left;
+        margin-right: 1em;
+        border: 1px solid rgba(0, 0, 0, 0.31);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; 
+    }
+    .chatWrapper #chat li .userSay{
+        width: auto;
+        margin-left: 50px;
+        margin-right: 20px;
+        font-size: 14px;
+        background-color: #ADDC4B;
+        padding: 1px;
+        border-radius: .7em;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #86AD5A;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.43);
+    }
+    .chatWrapper #chat li .inlineText{
+        font-size: "Helvetica Neue", Helvetica, 'Microsoft Yahei', tahoma,Georgia, Arial, sans-serif;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.17);
+        color: #333;    
+        position: relative;
+        border-radius: .7em;
+        display: block;
+        padding:.8em .5em .5em;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.59);
+        line-height: 1.3;
+    }
+    /*左侧气泡*/
+    .chatWrapper #chat li .inlineText:after,
+    .chatWrapper #chat li .inlineText:before{
+        border: solid rgba(0, 0, 0, 0);
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        top: 14px;
+    }
+     
+    .chatWrapper #chat li .inlineText:after{
+        right: 100%;    
+        border-color: rgba(248, 248, 248, 0);
+        border-right-color: #ADDC4B;
+        border-width: 8px;
+        margin-top: -6px;   
+    }
+    .chatWrapper #chat li .inlineText:before {
+        right: 100.2%;      
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: rgba(145, 180, 105, 0.82);
+        border-width: 10px;
+        margin-top: -8px;
+    }
+    /*右侧气泡*/
+    .chatWrapper #chat li.author .userFace{
+        float: right;
+        margin-left: 1em;
+        margin-right: 0;
+    }
+    .chatWrapper #chat li.author .userSay{
+        float: right;
+        background-color: rgb(230,230,230);
+        border: 1px solid rgb(186,186,186);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .chatWrapper #chat li.author .inlineText:after,
+    .chatWrapper #chat li.author .inlineText:before{
+        right: auto;
+        top: 16px;
+        border: solid rgba(0, 0, 0, 0);
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        margin-left: 1px;
+    }
+    .chatWrapper #chat li.author .inlineText:after{
+        left: 100.1%;   
+        border-color: rgba(248, 248, 248, 0);
+        border-left-color:#E6E6E6;
+        border-width: 8px;
+        margin-top: -6px;   
+    }
+    .chatWrapper #chat li.author .inlineText:before{
+        left: 100.3%;
+        border-color: rgba(255, 255, 255, 0);
+        border-left-color: rgba(189, 189, 189, 0.7);
+        border-width: 10px;
+        margin-top: -8px;   
+    }
+    .page{
+        margin-top:-10px;
+       float:right
+    }
+    .page a{
+        
+    }
+    .footer {
+        margin-top: 80px;
+        height: 50px;
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    .footer p{
+        line-height:50px;
+        text-align: center;
+    }
