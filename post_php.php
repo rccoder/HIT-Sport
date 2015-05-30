@@ -2,7 +2,7 @@
         include_once('conf.php');
         $author = $_POST['author'];
         $post = $_POST['post'];
-        $time = date('y-m-d h:i:s',time());
+        $time = date('y-m-d H:i:s',time());
         $sql = "INSERT INTO posts (author, post, time) VALUES ('$author', '$post', '$time')";
         if(mysql_query($sql)) {
             if(mysql_affected_rows())
